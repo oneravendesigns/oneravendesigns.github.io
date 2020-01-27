@@ -903,7 +903,7 @@ input::-moz-focus-inner {
 .kimpicture
   {
   
-    display: block;
+    /* display: block; */
     width: 100%;
     
   }
