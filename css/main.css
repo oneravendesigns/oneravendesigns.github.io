@@ -902,11 +902,9 @@ input::-moz-focus-inner {
 
 .kimpicture
   {
-    right: 30px;
-    position: absolute;
-    display: inline-block;
-    max-width: 100%;
-    height: auto;
+  
+    display: block;
+    width: 100%;
     
   }
 /* ------------------------------------------------------------------- 
