@@ -902,11 +902,10 @@ input::-moz-focus-inner {
 
 .kimpicture
   {
-  
-    /* display: block; */
-    width: 100%;
-    
-  }
+    max-width: 300px;
+}
+
+
 /* ------------------------------------------------------------------- 
  * ## alert box
  * ------------------------------------------------------------------- */
@@ -1356,6 +1355,32 @@ input::-moz-focus-inner {
   height: 408px;
 }
 
+/* For Bio page */
+.header-logo-bio 
+{
+  z-index: 5;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 110px;
+  top: 10%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.header-logo-bio a {
+  display: block;
+  padding: 0;
+  outline: 0;
+  border: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.header-logo-bio img {
+  width: 300px;
+  height: 136px;
+}
 
 /* ------------------------------------------------------------------- 
  * ## main navigation 
@@ -1742,6 +1767,135 @@ input::-moz-focus-inner {
 }
 
 
+/*For bio page
+* responsive:
+ * header
+ * ------------------------------------------------------------------- */
+@media only screen and (max-width: 1600px) {
+  .header-logo-bio {
+    left: 60px;
+  }
+
+  .header-menu-toggle {
+    right: 60px;
+  }
+}
+@media only screen and (max-width: 800px) and (orientation: landscape) {
+  .header-logo-bio {
+    left: 30px;
+    top: 30px;
+  }
+
+  .header-logo-bio img {
+    width: 175px;
+    height: 80px;
+  }
+  
+  .header-menu-toggle {
+    right: 40px;
+  }
+}
+@media only screen and (max-width: 800px) and (orientation: portrait) {
+  .header-logo-bio {
+    left: 30px;
+    top: 30px;
+  }
+
+  .header-logo-bio img {
+    width: 175px;
+    height: 80px;
+  }
+  
+  .header-menu-toggle {
+    right: 40px;
+  }
+}
+@media only screen and (max-width: 600px) and (orientation: landscape) {
+  .s-header-bio {
+    height: 70px;
+    top: 30px;
+  }
+
+  .header-logo-bio {
+    left: 20px;
+  }
+  .header-logo-bio img {
+    width: 125px;
+    height: 57px;
+  }
+
+  .header-menu-toggle {
+    right: 25px;
+    top: 30px;
+  }
+}
+
+@media only screen and (max-width: 600px) and (orientation: portrait) {
+  .s-header-bio {
+    height: 70px;
+    top: 30px;
+  }
+
+  .header-logo-bio {
+    left: 20px;
+  }
+  .header-logo-bio img {
+    width: 125px;
+    height: 57px;
+  }
+
+  .header-menu-toggle {
+    right: 25px;
+    top: 30px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .header-menu-toggle::before {
+    display: none;
+  }
+}
+@media only screen and (max-width: 400px) and (orientation: landscape)  {
+  .s-header-bio {
+    top: 10px;
+  }
+
+  .header-logo-bio {
+    left: 15px;
+  }
+  .header-logo-bio img img {
+    width: 100px;
+    height: 45px;
+  }
+
+  .header-menu-toggle {
+    top: 24px;
+    right: 20px;
+  }
+}
+
+
+@media only screen and (max-width: 400px) and (orientation: portrait)  {
+  .s-header-bio {
+    top: 10px;
+  }
+
+  .header-logo-bio {
+    left: 15px;
+  }
+  .header-logo-bio img img {
+    width: 100px;
+    height: 45px;
+  }
+
+  .header-menu-toggle {
+    top: 24px;
+    right: 20px;
+  }
+}
+
+
+
+
 /* ===================================================================
  * # home
  *
@@ -1779,6 +1933,41 @@ input::-moz-focus-inner {
   background: #000000;
 }
 
+
+/*For bio page */
+
+.s-home-bio {
+  width: 100%;
+  height: 50%;
+  /*min-height: 786px;*/
+  background-color: transparent;
+  position: relative;
+  display: table;
+}
+.s-home-bio .shadow-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  opacity: 0.4;
+  background: linear-gradient(to right, black 0%, black 20%, transparent 100%);
+}
+.s-home-bio::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  opacity: 0.65;
+  background-color: #000000;
+}
+
+.no-js .s-home-bio {
+  background: #000000;
+}
 
 /* ------------------------------------------------------------------- 
  * ## home content
